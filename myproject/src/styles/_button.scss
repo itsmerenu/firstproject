@@ -1,0 +1,53 @@
+.button {
+    outline: none;
+    border: none;
+    font-family: $fontFamily;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    cursor: pointer;
+
+    &--primary {
+        background-color: $moderateCyan;
+        color: $white;
+        flex: 1;
+
+        &:hover {
+            background-color: $darkCyan;
+        }
+
+        @include media-query(tablet) {
+            flex: none;
+        }
+    }
+
+    &--primary-no-flex {
+        @extend .button--primary;
+        flex: none;
+        padding: 1rem 1.5rem;
+        margin-left: auto;
+        display: block;
+    }
+
+    &--primary-centered {
+        @extend .button--primary-no-flex;
+        margin: 0 auto;
+    }
+
+    &--primary-margin-top {
+        @extend .button--primary-no-flex;
+        margin-top: 1rem;
+    }
+
+    &--bookmark {
+        background-color: $bookmarkBg;
+        padding: 1.1rem 1.5rem 1rem 4.5rem;
+        color: $darkGray;
+    }
+
+    &--unavailable {
+        background-color: $darkGray;
+        color: $white;
+    }
+}

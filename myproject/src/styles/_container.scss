@@ -1,0 +1,119 @@
+.container {
+    position: relative;
+    background-color: $white;
+    padding: 2rem;
+    font-family: $fontFamily;
+    border-radius: .5rem;
+    width: Min(45rem, 100%);
+    margin: 0 auto;
+    box-shadow: 0 0 5px 0 #f2f2f2;
+
+    &:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+
+    &__logo {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__main-text {
+        color: $black;
+        font-weight: 700;
+
+        &--product-title {
+            font-size: 1.5rem;
+            text-align: center;
+
+            @include media-query(tablet) {
+                font-size: 1.8rem;
+            }
+        }
+
+        &--data {
+            font-size: 2.3rem;
+            margin: 0 0 -.8rem;
+        }
+
+        &--card {
+            margin: 0;
+
+            @include media-query(tablet) {
+                font-size: 1.1rem;
+                margin-right: 1rem;
+            }
+        }
+
+        &--centered {
+            text-align: center;
+        }
+    }
+
+    &__body-text {
+        color: $darkGray;
+        line-height: 1.6rem;
+        font-size: .9rem;
+
+        @include media-query(tablet) {
+            font-size: 1rem;
+        }
+
+        &--product-desc {
+            text-align: center;
+            
+            @include media-query(tablet) {
+                margin: 1rem 0 2rem;
+            }
+        }
+
+        &--centered {
+            text-align: center;
+        }
+
+        &--pledge {
+            color: $moderateCyan;
+            font-weight: 500;
+            margin: .5rem 0 0;
+
+            @include media-query(tablet) {
+                margin: 0;
+                line-height: initial;
+            }
+        }
+
+        &--left {
+            margin-left: .8rem;
+        }
+
+        &--data {
+            @include media-query(tablet) {
+                margin: 1rem 0 0;
+            }
+        }
+    }
+
+    &__card {
+        padding: 1.5rem;
+        margin: 2rem 0;
+        border: 1px solid $darkGray;
+        border-radius: .5rem;
+        position: relative;
+
+        &--unavailable {
+            pointer-events: none;
+            opacity: .4;
+        }
+
+        &--selected {
+            border-color: transparent;
+            box-shadow: 0 0 0 2px $moderateCyan;
+        }
+    }
+
+    &__img {
+        display: block;
+        margin: 0 auto;
+    }
+}
